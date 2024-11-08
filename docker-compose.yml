@@ -1,0 +1,25 @@
+
+services:
+
+   bind9:
+      image: ubuntu/bind9
+      
+      container_name: bind9
+      
+      restart: always
+      
+     #volumes: 
+      
+       # - ./named.conf:/etc/bind/named.conf:ro
+         
+       # - ./zones:/var/cache/bind:ro
+        
+       # - ./data:/var/lib/bind
+        
+      ports:
+      
+      - "54:53/tcp"
+        
+      - "54:53/udp"
+      
+             
